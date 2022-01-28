@@ -23,7 +23,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 404)]
         public ActionResult<Demo> Get(int id)
         {
-            Console.Out.WriteLineAsync(string.Format("Get [{0}]", id));
+            Console.Out.WriteLineAsync(string.Format("Get Id=[{0}]", id));
 
             var obj = demoList.FirstOrDefault(x => x.Id == id);
 
@@ -37,7 +37,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 400)]
         public ActionResult Post(Demo demo)
         {
-            Console.Out.WriteLineAsync(string.Format("Post [{0}], [{1}]", demo.Id, demo.Name));
+            Console.Out.WriteLineAsync(string.Format("Post {0}", demo));
 
             var obj = demoList.FirstOrDefault(x => x.Id == demo.Id);
 
@@ -55,7 +55,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 404)]
         public ActionResult Put(Demo demo)
         {
-            Console.Out.WriteLineAsync(string.Format("Put [{0}], [{1}]", demo.Id, demo.Name));
+            Console.Out.WriteLineAsync(string.Format("Put {0}", demo));
 
             var obj = demoList.FirstOrDefault(x => x.Id == demo.Id);
 
@@ -73,7 +73,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 404)]
         public ActionResult Delete(int id)
         {
-            Console.Out.WriteLineAsync(string.Format("Delete [{0}]", id));
+            Console.Out.WriteLineAsync(string.Format("Delete Id=[{0}]", id));
 
             var obj = demoList.FirstOrDefault(x => x.Id == id);
 
