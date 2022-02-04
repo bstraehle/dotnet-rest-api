@@ -11,4 +11,8 @@ app.UseSwaggerUI();
 
 app.MapControllers();
 
+app.UseCors(builder => builder.WithOrigins("http://localhost:4200" /* Angular */)
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
 app.Run();
