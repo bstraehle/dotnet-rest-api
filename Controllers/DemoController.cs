@@ -37,7 +37,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 400)]
         public ActionResult Post(Demo demo)
         {
-            Console.Out.WriteLineAsync(string.Format("Post {0}", demo));
+            Console.Out.WriteLineAsync(string.Format("Post Demo=[{0}]", demo));
 
             var obj = demoList.FirstOrDefault(x => x.Id == demo.Id);
 
@@ -55,7 +55,7 @@ namespace DemoAPI.Controllers
         [ProducesResponseType(typeof(string), 404)]
         public ActionResult Put(Demo demo)
         {
-            Console.Out.WriteLineAsync(string.Format("Put {0}", demo));
+            Console.Out.WriteLineAsync(string.Format("Put Demo=[{0}]", demo));
 
             var obj = demoList.FirstOrDefault(x => x.Id == demo.Id);
 
