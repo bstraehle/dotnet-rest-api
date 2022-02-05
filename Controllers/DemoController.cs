@@ -29,7 +29,7 @@ namespace DemoAPI.Controllers
 
             if (obj != null) return obj;
 
-            return NotFound("Demo object not found");
+            return NotFound("{'Result': 'Demo object not found'}");
         }
 
         [HttpPost]
@@ -44,10 +44,10 @@ namespace DemoAPI.Controllers
             if (obj == null)
             {
                 demoList.Add(demo);
-                return Ok("Demo object added");
+                return Ok("{'Result': 'Demo object added'}");
             }
 
-            return BadRequest("Duplicate demo object id");
+            return BadRequest("{'Result': 'Duplicate demo object id'}");
         }
 
         [HttpPut("{id}")]
@@ -62,10 +62,10 @@ namespace DemoAPI.Controllers
             if (obj != null)
             {
                 obj.Name = demo.Name;
-                return Ok("Demo object updated");
+                return Ok("{'Result': 'Demo object updated'}");
             }
 
-            return NotFound("Demo object not found");
+            return NotFound("{'Result': 'Demo object not found'}");
         }
 
         [HttpDelete("{id}")]
@@ -80,10 +80,10 @@ namespace DemoAPI.Controllers
             if (obj != null)
             {
                 demoList.Remove(obj);
-                return Ok("Demo object deleted");
+                return Ok("{'Result': 'Demo object deleted'}");
             }
 
-            return NotFound("Demo object not found");
+            return NotFound("{'Result': 'Demo object not found'}");
         }
     }
 }
