@@ -1,3 +1,5 @@
+Demo REST API using in-memory data.  Implements CRUD operations via GET, POST, PUT, and DELETE verbs.  
+
 Build image and run container:  
 ```
 docker build -t restapi-image .  
