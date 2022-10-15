@@ -14,5 +14,5 @@ Tag image and upload to Docker Hub:
 docker tag restapi-image bstraehle/rest-api:latest  
 docker push bstraehle/rest-api:latest  
 ```
-For Docker orchestration using this container, see https://github.com/bstraehle/docker.git#readme  
-For Kubernetes orchestration using this container, see https://github.com/bstraehle/kubernetes.git#readme  
+For Docker orchestration using this container, see https://github.com/bstraehle/docker  
+For Kubernetes orchestration using this container, see https://github.com/bstraehle/kubernetes  
