@@ -3,7 +3,7 @@ Generic REST API using in-memory data.  Implements CRUD operations via GET, POST
 Build image and run container:  
 ```
 docker build -t restapi-image .  
-docker run --name restapi-container -d -p 8001:80 restapi-image  
+docker run --name restapi-container -d -p 8001:8080 restapi-image  
 ```
 URL:  
 ```
